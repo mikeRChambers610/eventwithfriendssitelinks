@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Event With Friends",
+    "slug": "eventwithfriendssite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "build": {
+        "output": "./build"  // Specify a custom build output directory if desired
+      }
+    }
+  }
+}
