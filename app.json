@@ -14,7 +14,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "platforms": ["ios", "android", "web"],
+    "platforms": ["web"],
     "ios": {
       "supportsTablet": true
     },
