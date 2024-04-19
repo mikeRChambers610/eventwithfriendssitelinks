@@ -25,10 +25,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "build": {
-        "output": "./build"  // Specify a custom build output directory if desired
-      }
+      "favicon": "./assets/favicon.png"
     }
   }
 }
