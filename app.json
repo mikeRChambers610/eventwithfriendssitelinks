@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Event With Friends",
+    "name": "eventwithfriendssite",
     "slug": "eventwithfriendssite",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,7 +14,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "platforms": ["web"],
     "ios": {
       "supportsTablet": true
     },
