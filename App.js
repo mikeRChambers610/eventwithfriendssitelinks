@@ -1,11 +1,20 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './screens/Home';
+import Detail from './screens/Detail';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Event With Friends site coming soon!</Text>
       <StatusBar style="auto" />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details" element={<Detail />} />
+        </Routes>
+      </Router>
     </View>
   );
 }
@@ -13,8 +22,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    width: '100vw', // Ensure full viewport width
+    height: '100vh', // Ensure full viewport height
+    backgroundColor: '#c6e2eb',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 0, // Remove default margins
+    padding: 0, // Remove default padding
   },
 });
