@@ -1,26 +1,27 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { Link } from 'react-router-dom'; // Import Link
+import { View, Text, TouchableOpacity, StyleSheet, Linking } from 'react-native';
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Event with Friends!</Text>
       <Text style={styles.subtitle}>Discover and share events with your friends.</Text>
-      <Link to="/details" style={styles.linkStyle}> {/* Use Link here */}
-        <Text style={styles.button}>Go to Details</Text>
-      </Link>
+      <TouchableOpacity
+        style={styles.linkStyle}
+        onPress={() => Linking.openURL('https://linke.to/eventwithfriends')}
+      >
+        <Text style={styles.buttonText}>Download the App Free</Text>
+      </TouchableOpacity>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%', // Use full width of the parent container
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20, // Add padding if needed inside the container
+    padding: 20,
   },
   title: {
     fontSize: 24,
@@ -35,12 +36,11 @@ const styles = StyleSheet.create({
   linkStyle: {
     backgroundColor: '#1e90ff',
     padding: 10,
-    color: 'white',
-    textDecoration: 'none'
+    borderRadius: 5,
   },
-  button: {
+  buttonText: {
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
   }
 });
 

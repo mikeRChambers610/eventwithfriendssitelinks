@@ -1,21 +1,24 @@
+// App.js
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Detail from './screens/Detail';
+import NavBar from './navigation/NavBar'; // Update the path as necessary
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Router>
+    <Router>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details" element={<Detail />} />
         </Routes>
-      </Router>
-    </View>
+      </View>
+    </Router>
   );
 }
 
@@ -26,7 +29,7 @@ const styles = StyleSheet.create({
     height: '100vh', // Ensure full viewport height
     backgroundColor: '#c6e2eb',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start', // Adjusted to place items correctly
     margin: 0, // Remove default margins
     padding: 0, // Remove default padding
   },

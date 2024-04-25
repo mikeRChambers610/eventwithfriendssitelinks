@@ -1,44 +1,21 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Platform, Linking } from 'react-native';
+import React from 'react';
+import { View, Text, Button, StyleSheet, Linking } from 'react-native';
 
 const Detail = () => {
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [body, setBody] = useState('');
-
   // Function to handle sending the email
   const sendEmail = () => {
+    const email = 'support@eventwithfriends.com';
+    const subject = 'Event With Friends Inquiry';
+    const body = '';
     const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     Linking.openURL(url)
       .catch(err => console.error('An error occurred', err));
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Contact Us</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={setEmail}
-        value={email}
-        placeholder="Enter your email"
-        keyboardType="email-address"
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={setSubject}
-        value={subject}
-        placeholder="Subject"
-      />
-      <TextInput
-        style={[styles.input, styles.inputMultiline]}
-        onChangeText={setBody}
-        value={body}
-        placeholder="Your message"
-        multiline
-        numberOfLines={4}
-      />
+    <View style={styles.container}> 
       <Button
-        title="Send Email"
+        title="Contact Us"
         onPress={sendEmail}
         color="#1e90ff"
       />
@@ -57,19 +34,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 20,
-  },
-  input: {
-    width: '100%',
-    padding: 10,
-    marginVertical: 10,
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
-  },
-  inputMultiline: {
-    height: 100,
-    textAlignVertical: 'top',
   }
 });
 
