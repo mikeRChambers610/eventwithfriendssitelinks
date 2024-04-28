@@ -15,7 +15,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.everthingappsllc.eventwithfriendssite",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": ["6499504060"]
+      }
     },
     "android": {
       "adaptiveIcon": {
