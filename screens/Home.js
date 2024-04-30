@@ -7,9 +7,10 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
-  Linking
+  Linking,
+  Image
 } from 'react-native';
-import { Image } from 'expo-image';
+//import { Image } from 'expo-image';
 
 function Home() {
   const screenWidth = Dimensions.get('window').width; // Moved screenWidth here
@@ -52,7 +53,11 @@ function Home() {
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               <View style={styles.imageContainer}>
-                
+                <Image 
+                  source={item.uri} 
+                  style={styles.image} 
+                  resizeMode="contain" 
+                />
               </View>
             )}
           />
