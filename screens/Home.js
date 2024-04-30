@@ -10,12 +10,12 @@ import {
   TouchableOpacity,
   Linking // Add import statement for Linking
 } from 'react-native';
-import { Image } from 'expo-image';
-import { Asset } from 'expo-asset';
+//import { Image } from 'expo-image';
+//import { Asset } from 'expo-asset';
 
 function Home() {
   const screenWidth = Dimensions.get('window').width; // Moved screenWidth here
-
+/*
   // Preload images
   const image1 = Asset.fromModule(require('../assets/image1.png')).uri;
   const image2 = Asset.fromModule(require('../assets/image2.png')).uri;
@@ -33,7 +33,7 @@ function Home() {
     { id: '6', uri: image6, title: 'Events Screen' }, 
     { id: '7', uri: image7, title: 'Events Screen' },  
   ];
-
+*/
   return ( 
     <View style={styles.container}>
       <ScrollView>
@@ -55,21 +55,7 @@ function Home() {
           </View>
         </View>
         <View>
-          <FlatList
-            data={imageData}
-            horizontal={true}
-            showsHorizontalScrollIndicator={true}
-            keyExtractor={item => item.id}
-            renderItem={({ item }) => (
-              <View style={styles.imageContainer}>
-                <Image 
-                  source={{ uri: item.uri }} 
-                  style={styles.image} 
-                  resizeMode="contain" 
-                />
-              </View>
-            )}
-          />
+          
         </View>
       </ScrollView>
     </View> 
