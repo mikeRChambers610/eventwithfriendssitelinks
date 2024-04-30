@@ -52,11 +52,7 @@ function Home() {
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               <View style={styles.imageContainer}>
-                <Image 
-                  source={item.uri} 
-                  style={styles.image} 
-                  resizeMode="contain" 
-                />
+                
               </View>
             )}
           />
