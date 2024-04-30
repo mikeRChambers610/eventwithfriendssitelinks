@@ -10,7 +10,6 @@ import {
   Linking,
   Image
 } from 'react-native';
-//import { Image } from 'expo-image';
 
 function Home() {
   const screenWidth = Dimensions.get('window').width; // Moved screenWidth here
