@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
-    textDecoration: 'none'
+    textDecorationLine: 'none' // Ensure no underline by default
   },
   activeLinkStyle: {
     padding: 10,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     color: '#0288D1', // Highlight color for active link
     fontSize: 18,
     fontWeight: 'bold',
-    textDecoration: 'none'
+    textDecorationLine: 'underline' // Apply underline for the active link
   },
   icon: {
     width: 65, // Set the width of the icon
