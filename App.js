@@ -1,5 +1,5 @@
 // App.js
-import React from 'react';
+import React, { useState }  from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,6 +8,10 @@ import Detail from './screens/Detail';
 import NavBar from './navigation/NavBar'; // Update the path as necessary
 
 export default function App() {
+
+  const [data, setData] = useState(null);
+
+
   return (
     <Router>
       <View style={styles.container}>
@@ -16,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details" element={<Detail />} />
+          <Route path="/events" element={<Detail />} />
         </Routes>
       </View>
     </Router>

@@ -1,0 +1,39 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Action": [
+				"logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents",
+      "dynamodb:GetItem",
+      "dynamodb:DeleteItem",
+      "dynamodb:PutItem",
+      "dynamodb:Scan",
+      "dynamodb:Query",
+      "dynamodb:UpdateItem",
+      "dynamodb:BatchWriteItem",
+      "dynamodb:BatchGetItem",
+      "dynamodb:DescribeTable",
+      "dynamodb:ConditionCheckItem",
+      "dynamodb:GetRecords",
+      "dynamodb:GetShardIterator",
+      "dynamodb:DescribeStream",
+      "dynamodb:ListStreams"
+			],
+			"Resource": [
+				"arn:aws:dynamodb:us-east-1:649604034330:table/testingtableforlamndajson2",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/testingtableforlamndajson2/index/*",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI2-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI3-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI4-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI5-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI6-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI6FULL-h5ah4uhb4fgf7agnklnby7kqf4-dev",
+				"arn:aws:dynamodb:us-east-1:649604034330:table/PublicEventNewFromAPI7-h5ah4uhb4fgf7agnklnby7kqf4-dev"
+			],
+			"Effect": "Allow"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+  "api": {
+    "apideepliking": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "EventWithFriendsDeepLinking"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "EventWithFriendsDeepLinking": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_EventWithFriendsDeepLinking_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EventWithFriendsDeepLinking"
+        }
+      ]
+    },
+    "AMPLIFY_function_EventWithFriendsDeepLinking_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EventWithFriendsDeepLinking"
+        }
+      ]
+    }
+  }
+}

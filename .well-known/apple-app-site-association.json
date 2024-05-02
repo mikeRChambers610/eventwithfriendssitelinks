@@ -5,7 +5,9 @@
     "details": [
       {
  
-        "appID": "GW6H5C43VA.com.everthingappsllc.eventwithfriends"
+        "appID": "GW6H5C43VA.com.everthingappsllc.eventwithfriends",
+   
+        "paths": ["/events/*"]
       }
     ]
   },
