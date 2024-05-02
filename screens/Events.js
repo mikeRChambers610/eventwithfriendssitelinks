@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Example() {
+const Events = () => {
   const [data, setData] = useState(null);
 
   function handleClick() {
@@ -8,6 +8,7 @@ function Example() {
     xhr.open('GET', 'https://q0ekxtr8l3.execute-api.us-east-1.amazonaws.com/v1/events?groupID=87ea0c82-0d15-4e4b-b8d9-ab0daf2fcb3f&sortID=2023-06-22T22:02:16.063Z4cbfaaa8-7cbc-4b87-bb9f-c0fc17e94540');
 
     console.log("XHR")
+    //xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     console.log(xhr.responseText)
 
     /*xhr.onload = function() {
@@ -25,3 +26,5 @@ function Example() {
     </div>
   );
 }
+
+export default Events;

@@ -5,6 +5,7 @@ import { StyleSheet, View } from 'react-native';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Detail from './screens/Detail';
+import Events from './screens/Events';
 import NavBar from './navigation/NavBar'; // Update the path as necessary
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details" element={<Detail />} />
-          <Route path="/events" element={<Detail />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </View>
     </Router>
